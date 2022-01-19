@@ -1,10 +1,18 @@
 import './App.css'
-import InputForm from './components/InputForm'
+import NewExpense from './components/NewExpense'
+
 
 function App() {
+
+	const addExpenseHandler = (expense) => {
+		console.log(expense);
+
+	}
+
+
 	return (
 		<div className='App'>
-			<InputForm />
+			<NewExpense onAddExpense={addExpenseHandler}/>
 		</div>
 	)
 }
