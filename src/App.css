@@ -1,3 +1,16 @@
+.renderThing{
+  width: 1050px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  border-radius: 2px;
+  background-color: rgb(201, 192, 192);
+}
+h1{
+  font-weight: lighter;
+
+
+}
 .App {
   text-align: center;
 }

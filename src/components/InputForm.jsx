@@ -21,7 +21,7 @@ const InputForm = (props) => {
 		const expenseData = {
 			thing: thing, 
 			quantity: quantity,
-			date: new Date(date)
+			date: date
 		}
 		// console.log(expenseData);
 		props.onSaveExpenseData(expenseData)
