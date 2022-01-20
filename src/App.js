@@ -1,20 +1,51 @@
-import React, { useState } from "react"
-import './App.css'
-import TodoForm from "./components/TodoForm"
-
+import { useState } from 'react'
+import ToDo from './components/ToDo'
+import ToDoForm from './components/TodoForm'
 
 function App() {
-	const [todos, setTodos] = useState([])
+  const [todos, setTodos] = useState([])
 
-	const addTodo = (todo) => {
-		setTodos([todo, ...todos])
-	}
-	return <div className='App'>
-		<header className="App-header">
-			<p>React Todo</p>
-			<TodoForm addTodo={addTodo}/>
-		</header>
-  </div>
+  const addTask = (userInput) => {
+    if(userInput) {
+      const newItem = {
+        id: Math.random().toString(),
+        task: userInput,
+        complete: false
+      }
+      setTodos([...todos, newItem])
+    }
+  }
+
+  const removeTask = (id) => {
+    setTodos([...todos.filter((todo) => todo.id !== id)])
+  }
+
+  const handleToggle = (id) => {
+    setTodos([
+      ...todos.map((todo) => 
+        todo.id === id ? { ...todo, complete: !todo.complete } : {...todo }
+      )
+    ])
+  }
+
+  return (
+    <div className="App">
+      <header>
+        <h1>Список задач: {todos.length}</h1>
+      </header>
+      <ToDoForm addTask={addTask} />
+      {todos.map((todo) => {
+        return (
+          <ToDo
+            todo={todo}
+            key={todo.id}
+            toggleTask={handleToggle}
+            removeTask={removeTask}
+            />
+        )
+      })}
+    </div>
+  );
 }
 
-export default App
+export default App;

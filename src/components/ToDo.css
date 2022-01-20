@@ -1,0 +1,32 @@
+.item-todo {
+    padding: 14px;
+    width: 250px;
+    margin: 0 auto;
+    text-align: left;
+    margin-top: 15px;
+    background-color: darkcyan;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+   .item-todo .item-text {
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  
+   .item-todo .item-delete {
+    display: inline-block;
+    cursor: pointer;
+    float: right;
+    font-size: 22px;
+    position: relative;
+    left: -4px;
+    bottom: 5px;
+  }
+  
+  .strike {
+    text-decoration: line-through;
+  }
