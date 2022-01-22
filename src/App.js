@@ -12,9 +12,9 @@ function App() {
 			<Form onAddFormData={addFormDataHandler}/>
 			<div className='render-div'>
 				<h2 className='name'>{forms.name}</h2>
-				<h2 className='phone'>{forms.phone}</h2>
-				<h2 className='city'>{forms.city}</h2>
-				<h2 className='message'>{forms.message}</h2>
+				<h2 className='name'>{forms.phone}</h2>
+				<h2 className='name'>{forms.city}</h2>
+				<h2 className='name'>{forms.message}</h2>
 			</div>
 		</div>
 	)
