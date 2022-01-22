@@ -1,0 +1,70 @@
+.form {
+	margin-top: 50px;
+}
+.container {
+	text-align: center;
+	width: 300px;
+	height: 480px;
+	background-color: rgb(109, 214, 125);
+	margin: 0 auto;
+	border-radius: 10px;
+}
+.name-part {
+	width: 200px;
+	display: flex;
+	flex-direction: column;
+	margin-left: 50px;
+}
+.phone-part {
+	width: 200px;
+	display: flex;
+	flex-direction: column;
+	margin-left: 50px;
+	margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.city-select {
+	width: 200px;
+	display: flex;
+	flex-direction: column;
+	margin-left: 50px;
+    margin-bottom: 10px;
+	border: none;
+	border-radius: 5px;
+	background-color: aqua;
+	height: 30px;
+	text-align: center;
+	color: rgb(10, 10, 241);
+}
+
+.field {
+	width: 195px;
+	display: flex;
+	flex-direction: column;
+	margin-left: 50px;
+	border: none;
+	border-radius: 5px;
+	background-color: aqua;
+	height: 100px;
+	color: rgb(10, 10, 241);
+    margin-bottom: 30px;
+}
+.btn {
+	width: 80px;
+	height: 40px;
+	/* margin-top: 40px; */
+	border-radius: 10px;
+	background-color: #bf4abd;
+	color: aqua;
+}
+input {
+	border: none;
+	border-radius: 5px;
+	background-color: aqua;
+	height: 30px;
+    color: rgb(10, 10, 241);
+}
+h1 {
+	color: #bf4abd;
+}

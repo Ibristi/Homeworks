@@ -1,26 +1,21 @@
+import { useState } from 'react'
 import './App.css'
+import Form from './components/Form'
 
 function App() {
+	const [forms, setForms] = useState('')
+	const addFormDataHandler = (rend) => {
+		setForms(rend)
+	}
 	return (
 		<div className='App'>
-			<form className='form'>
-				<div className='container'>
-					<h1>SIGN UP</h1>
-					<div className='name-part'>
-						Full name:
-						<input type='text' placeholder='Ф.И.О' />
-					</div>
-					<div className='username-part'>
-						Nickname:
-						<input type='text' placeholder='Nickname' />
-					</div>
-					<div className='email-part'>
-						Email:
-						<input type='email' placeholder='Email' />
-					</div>
-					<button className='btn'>Confirm</button>
-				</div>
-			</form>
+			<Form onAddFormData={addFormDataHandler}/>
+			<div className='render-div'>
+				<h2 className='name'>{forms.name}</h2>
+				<h2 className='phone'>{forms.phone}</h2>
+				<h2 className='city'>{forms.city}</h2>
+				<h2 className='message'>{forms.message}</h2>
+			</div>
 		</div>
 	)
 }
